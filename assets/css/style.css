@@ -23,7 +23,7 @@ img {
   display: block;
 }
 
-.avatar {
+.pfp-square img {
   height: 100%;
   border-radius: 50%;
 }
@@ -117,6 +117,7 @@ img {
 .left {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .my-status {
@@ -135,16 +136,6 @@ img {
 
 .icons {
   padding-right: 30px;
-}
-
-.contacts {
-  overflow: auto;
-}
-
-.contact {
-  background-color: white;
-  /* border: 1px dashed; */
-  height: 50px;
 }
 
 .notifications {
@@ -193,6 +184,7 @@ img {
   border: none;
   flex-grow: 1;
   font-size: 1rem;
+  min-width: 20px;
 }
 
 .icon-input input:focus-visible {
@@ -204,14 +196,47 @@ img {
   margin-right: 20px;
 }
 
+.contacts {
+  overflow: auto;
+}
+
+.contact {
+  background-color: white;
+  /* border: 1px dashed; */
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.contact-text {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name p {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.name span {
+  color: rgb(162, 162, 162);
+}
+
+.time {
+  margin-right: 10px;
+  color: rgb(162, 162, 162);
+}
+
 /* #endregion LEFT  */
 
 /* #region RIGHT  */
 
 .top-bar {
-  background-color: var(--background-grey);
+  background-color: var(--background-header);
   /* border: 1px dashed; */
-  height: 60px;
+  height: 90px;
 }
 
 .content {
@@ -291,6 +316,27 @@ img {
 
   .col-md-12 {
     width: 100%;
+  }
+
+  .left {
+    width: 90px;
+  }
+
+  .right {
+    flex-grow: 1;
+  }
+
+  .notifications,
+  .search-bar {
+    display: none;
+  }
+
+  .my-status :not(.pfp-square, img) {
+    display: none;
+  }
+
+  .contact :not(.pfp-square, img) {
+    display: none;
   }
 }
 
