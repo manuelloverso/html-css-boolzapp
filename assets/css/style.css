@@ -8,6 +8,11 @@
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: var(--background-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 a {
@@ -18,16 +23,31 @@ img {
   display: block;
 }
 
+:root {
+  --background-grey: #dadbd4;
+  --background-green: #009688;
+  --background-header: #eaeaea;
+  --background-type-bar: #f3eeea;
+  --icons-top: #b1b1b1;
+  --icons-bottom: #6b7376;
+  --notifications: #8edafc;
+  --green-message: #d5f9ba;
+}
+
 /* #endregion COMMON */
 
 /* #region UTILITIES */
 
 .container {
-  margin: auto;
+  background-color: aqua;
+  height: 90vh;
+  width: 80%;
+  display: flex;
 }
 
-[class^="col-"] {
-  padding: 1rem;
+[class*="col-"] {
+  background-color: beige;
+  border: 1px dashed;
 }
 
 .col-1 {
@@ -58,8 +78,16 @@ img {
   width: calc((100% / 12) * 10);
 }
 
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+
 .col-12 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 /* #endregion UTILITIES */
@@ -68,6 +96,49 @@ img {
 /* #endregion HEADER */
 
 /* #region MAIN */
+
+/* #region LEFT  */
+
+.my-status {
+  background-color: var(--background-header);
+  height: 60px;
+  border: 1px dashed;
+}
+
+.contacts {
+  height: calc(100% - (60px * 3));
+  overflow: auto;
+}
+
+.contact {
+  background-color: white;
+  border: 1px dashed;
+  height: 50px;
+}
+
+/* #endregion LEFT  */
+
+/* #region RIGHT  */
+
+.top-bar {
+  background-color: var(--background-grey);
+  border: 1px dashed;
+  height: 60px;
+}
+
+.content {
+  height: calc(100% - (60px * 2));
+  overflow: auto;
+}
+
+.type-bar {
+  background-color: var(--background-type-bar);
+  border: 1px dashed;
+  height: 60px;
+}
+
+/* #endregion RIGHT  */
+
 /* #endregion MAIN */
 
 /* #region FOOTER */
@@ -77,6 +148,11 @@ img {
 
 /* TABLET RESPONSIVE */
 @media screen and (max-width: 991px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+
   .col-md-1 {
     width: calc(100% / 12);
   }
@@ -103,6 +179,10 @@ img {
 
   .col-md-10 {
     width: calc((100% / 12) * 10);
+  }
+
+  .col-md-11 {
+    width: calc((100% / 12) * 11);
   }
 
   .col-md-12 {
@@ -140,8 +220,16 @@ img {
     width: calc((100% / 12) * 10);
   }
 
+  .col-sm-11 {
+    width: calc((100% / 12) * 11);
+  }
+
   .col-sm-12 {
     width: 100%;
+  }
+
+  .container > .left {
+    display: none;
   }
 }
 
