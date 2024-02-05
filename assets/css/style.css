@@ -8,7 +8,11 @@
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: var(--background-grey);
+  background: linear-gradient(
+    to bottom,
+    var(--background-green) 200px,
+    var(--background-grey) 20px
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +43,10 @@ img {
   margin: 0;
 }
 
+.top-bar i:first-child {
+  margin: 0;
+}
+
 :root {
   --background-grey: #dadbd4;
   --background-green: #009688;
@@ -58,6 +66,7 @@ img {
 .container {
   height: 90vh;
   width: 80%;
+  max-width: 1600px;
   display: flex;
 }
 
@@ -246,6 +255,15 @@ img {
   border-left: 1px solid gainsboro;
 }
 
+.top-bar-text p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.top-bar-text span {
+  color: grey;
+}
+
 .top-bar-icons {
   margin-left: auto;
 }
@@ -258,12 +276,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.type-bar {
-  background-color: var(--background-type-bar);
-  /* border: 1px dashed; */
-  height: 80px;
 }
 
 .message-left,
@@ -292,6 +304,28 @@ img {
 
 [class^="message-"] p {
   padding-right: 10px;
+}
+
+.type-bar {
+  background-color: var(--background-type-bar);
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.record,
+.emoji {
+  padding: 0 30px;
+  color: var(--icons-bottom);
+}
+
+.type-msg {
+  flex-grow: 1;
+  border: none;
+  height: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 /* #endregion RIGHT  */
@@ -408,6 +442,18 @@ img {
 
   .container > .left {
     display: none;
+  }
+
+  .emoji,
+  .record,
+  .top-bar-icons {
+    display: none;
+  }
+
+  .type-msg {
+    flex-grow: 0;
+    width: 90%;
+    margin: auto;
   }
 }
 
