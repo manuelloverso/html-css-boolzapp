@@ -105,6 +105,10 @@ img {
   height: 100%;
 }
 
+.pr-30 {
+  padding-right: 30px;
+}
+
 /* #endregion UTILITIES */
 
 /* #region HEADER */
@@ -235,12 +239,20 @@ img {
 
 .top-bar {
   background-color: var(--background-header);
-  /* border: 1px dashed; */
+  display: flex;
+  align-items: center;
   height: 90px;
+  display: flex;
+  border-left: 1px solid gainsboro;
+}
+
+.top-bar-icons {
+  margin-left: auto;
 }
 
 .content {
-  height: calc(100% - (60px * 2));
+  background-image: url(../img/mine.jpg);
+  height: calc(100% - 90px - 80px);
   overflow: auto;
   padding: 20px 20px;
   display: flex;
@@ -251,7 +263,7 @@ img {
 .type-bar {
   background-color: var(--background-type-bar);
   /* border: 1px dashed; */
-  height: 60px;
+  height: 80px;
 }
 
 .message-right {
