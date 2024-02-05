@@ -23,6 +23,18 @@ img {
   display: block;
 }
 
+.avatar {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.my-status i,
+.top-bar i {
+  color: var(--icons-top);
+  font-size: 1.8rem;
+  margin-left: 25px;
+}
+
 :root {
   --background-grey: #dadbd4;
   --background-green: #009688;
@@ -101,8 +113,20 @@ img {
 
 .my-status {
   background-color: var(--background-header);
-  height: 60px;
   border: 1px dashed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+.pfp-square {
+  height: 100%;
+  padding: 15px;
+}
+
+.icons {
+  padding-right: 30px;
 }
 
 .contacts {
