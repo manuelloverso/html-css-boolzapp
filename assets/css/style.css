@@ -35,6 +35,10 @@ img {
   margin-left: 25px;
 }
 
+.my-status i:first-child {
+  margin: 0;
+}
+
 :root {
   --background-grey: #dadbd4;
   --background-green: #009688;
@@ -44,6 +48,7 @@ img {
   --icons-bottom: #6b7376;
   --notifications: #8edafc;
   --green-message: #d5f9ba;
+  --background-searchbar: #fafafa;
 }
 
 /* #endregion COMMON */
@@ -51,15 +56,13 @@ img {
 /* #region UTILITIES */
 
 .container {
-  background-color: aqua;
   height: 90vh;
   width: 80%;
   display: flex;
 }
 
 [class*="col-"] {
-  background-color: beige;
-  border: 1px dashed;
+  /* border: 1px dashed; */
 }
 
 .col-1 {
@@ -111,9 +114,14 @@ img {
 
 /* #region LEFT  */
 
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
 .my-status {
   background-color: var(--background-header);
-  border: 1px dashed;
+  /* border: 1px dashed; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,14 +138,70 @@ img {
 }
 
 .contacts {
-  height: calc(100% - (60px * 3));
   overflow: auto;
 }
 
 .contact {
   background-color: white;
-  border: 1px dashed;
+  /* border: 1px dashed; */
   height: 50px;
+}
+
+.notifications {
+  background-color: var(--notifications);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.bell-icon {
+  background-color: white;
+  padding: 20px 15px;
+  border-radius: 50%;
+}
+
+.notifications .bell {
+  color: var(--notifications);
+}
+
+.notifications-text p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.notifications-text span {
+  color: rgb(84, 84, 84);
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.search-bar {
+  background-color: var(--background-searchbar);
+  padding: 10px;
+}
+
+.icon-input {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+}
+
+.icon-input input {
+  border: none;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.icon-input input:focus-visible {
+  outline: none;
+}
+
+.icon-input i {
+  color: grey;
+  margin-right: 20px;
 }
 
 /* #endregion LEFT  */
@@ -146,7 +210,7 @@ img {
 
 .top-bar {
   background-color: var(--background-grey);
-  border: 1px dashed;
+  /* border: 1px dashed; */
   height: 60px;
 }
 
@@ -161,7 +225,7 @@ img {
 
 .type-bar {
   background-color: var(--background-type-bar);
-  border: 1px dashed;
+  /* border: 1px dashed; */
   height: 60px;
 }
 
