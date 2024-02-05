@@ -129,12 +129,28 @@ img {
 .content {
   height: calc(100% - (60px * 2));
   overflow: auto;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .type-bar {
   background-color: var(--background-type-bar);
   border: 1px dashed;
   height: 60px;
+}
+
+.message-right {
+  background-color: var(--green-message);
+  align-self: flex-end;
+  max-width: 60%;
+}
+
+.message-left {
+  background-color: white;
+  align-self: flex-start;
+  max-width: 60%;
 }
 
 /* #endregion RIGHT  */
