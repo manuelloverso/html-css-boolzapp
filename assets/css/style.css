@@ -266,16 +266,32 @@ img {
   height: 80px;
 }
 
+.message-left,
+.message-right {
+  max-width: 60%;
+  padding: 15px 0 0 15px;
+  border-radius: 10px;
+}
+
 .message-right {
   background-color: var(--green-message);
   align-self: flex-end;
-  max-width: 60%;
 }
 
 .message-left {
   background-color: white;
   align-self: flex-start;
-  max-width: 60%;
+}
+
+.message-time {
+  text-align: end;
+  color: rgb(144, 144, 144);
+  font-size: 0.7rem;
+  margin: 5px 4px 4px 0;
+}
+
+[class^="message-"] p {
+  padding-right: 10px;
 }
 
 /* #endregion RIGHT  */
