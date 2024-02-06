@@ -11,7 +11,7 @@ body {
   background: linear-gradient(
     to bottom,
     var(--background-green) 200px,
-    var(--background-grey) 20px
+    var(--background-grey) 200px
   );
   display: flex;
   justify-content: center;
@@ -34,9 +34,14 @@ img {
 
 .my-status i,
 .top-bar i {
+  cursor: pointer;
   color: var(--icons-top);
   font-size: 1.8rem;
   margin-left: 25px;
+}
+
+i:hover {
+  color: rgb(61, 61, 61);
 }
 
 .my-status i:first-child {
@@ -45,6 +50,10 @@ img {
 
 .top-bar i:first-child {
   margin: 0;
+}
+
+i {
+  transition: font-size 0.1s ease-in-out;
 }
 
 :root {
@@ -120,9 +129,6 @@ img {
 
 /* #endregion UTILITIES */
 
-/* #region HEADER */
-/* #endregion HEADER */
-
 /* #region MAIN */
 
 /* #region LEFT  */
@@ -174,10 +180,10 @@ img {
   margin-bottom: 5px;
 }
 
-.notifications-text span {
+.notifications-text a {
   color: rgb(84, 84, 84);
-  text-decoration: underline;
   font-size: 1.1rem;
+  text-decoration: underline;
 }
 
 .search-bar {
@@ -200,6 +206,10 @@ img {
   min-width: 20px;
 }
 
+.icon-input i:hover {
+  font-size: 1.6rem;
+}
+
 .icon-input input:focus-visible {
   outline: none;
 }
@@ -220,6 +230,10 @@ img {
   display: flex;
   align-items: center;
   border-bottom: 1px solid gainsboro;
+}
+
+.contact:hover {
+  background-color: rgb(239, 238, 238);
 }
 
 .contact-text {
@@ -278,6 +292,50 @@ img {
   gap: 16px;
 }
 
+.txt-icon {
+  display: flex;
+}
+
+.txt-icon i {
+  margin-right: 10px;
+  color: rgb(154, 154, 154);
+  cursor: pointer;
+}
+
+.txt-icon i:hover {
+  color: rgb(61, 61, 61);
+}
+
+.info-msg {
+  position: relative;
+}
+
+.info-msg summary {
+  list-style: none;
+}
+
+.info-msg ul {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  right: 10px;
+  background-color: white;
+  list-style: none;
+  box-shadow: 0px 0px 20px -7px;
+}
+
+.info-msg li {
+  cursor: pointer;
+  text-align: center;
+  width: 180px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.info-msg li:hover {
+  background-color: rgb(233, 233, 233);
+}
+
 .message-left,
 .message-right {
   max-width: 60%;
@@ -315,6 +373,7 @@ img {
 
 .record,
 .emoji {
+  cursor: pointer;
   padding: 0 30px;
   color: var(--icons-bottom);
 }
@@ -331,9 +390,6 @@ img {
 /* #endregion RIGHT  */
 
 /* #endregion MAIN */
-
-/* #region FOOTER */
-/* #endregion FOOTER */
 
 /* #region MEDIA QUERIES */
 
